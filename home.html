@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js"></script>
+    <style type="text/tailwindcss">
+
+      @theme inline {
+        --color-background: var(--background);
+        --color-foreground: var(--foreground);
+        --color-primary: var(--primary);
+        --color-primary-foreground: var(--primary-foreground);
+        --color-secondary: var(--secondary);
+        --color-secondary-foreground: var(--secondary-foreground);
+        --color-muted: var(--muted);
+        --color-muted-foreground: var(--muted-foreground);
+        --color-accent: var(--accent);
+        --color-accent-foreground: var(--accent-foreground);
+        --color-destructive: var(--destructive);
+        --color-card: var(--card);
+        --color-card-foreground: var(--card-foreground);
+        --color-popover: var(--popover);
+        --color-popover-foreground: var(--popover-foreground);
+        --color-border: var(--border);
+        --color-input: var(--input);
+        --color-ring: var(--ring);
+        --color-chart-1: var(--chart-1);
+        --color-chart-2: var(--chart-2);
+        --color-chart-3: var(--chart-3);
+        --color-chart-4: var(--chart-4);
+        --color-chart-5: var(--chart-5);
+
+        --font-font-sans: var(--font-sans);
+        --font-font-heading: var(--font-heading);
+        --font-font-serif: var(--font-serif);
+        --font-font-mono: var(--font-mono);
+
+        --radius-sm: calc(var(--radius) - 4px);
+        --radius-md: calc(var(--radius) - 2px);
+        --radius-lg: var(--radius);
+        --radius-xl: calc(var(--radius) + 4px);
+      }
+
+      :root {
+          --background: #0A110D;
+        --foreground: #F0FDF4;
+        --primary: #10B981;
+        --primary-foreground: #022C22;
+        --secondary: #1B2A20;
+        --secondary-foreground: #A7F3D0;
+        --muted: #16221A;
+        --muted-foreground: #9CA3AF;
+        --accent: #F59E0B;
+        --accent-foreground: #FFFBEB;
+        --destructive: #EF4444;
+        --card: #111A14;
+        --card-foreground: #F0FDF4;
+        --popover: #111A14;
+        --popover-foreground: #F0FDF4;
+        --border: #203326;
+        --input: #16221A;
+        --ring: #10B981;
+        --chart-1: #2DD4BF;
+        --chart-2: #F59E0B;
+        --chart-3: #3B82F6;
+        --chart-4: #86EFAC;
+        --chart-5: #8B5CF6;
+
+        --font-sans: "Inter";
+        --font-heading: "Plus Jakarta Sans";
+        --font-serif: "Playfair Display";
+        --font-mono: "JetBrains Mono";
+
+        --radius: 1.25rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex flex-col min-h-screen bg-background text-foreground font-sans pb-24">
+      <header
+        class="sticky top-0 z-20 bg-background/80 backdrop-blur-xl border-b border-border px-5 py-3 flex items-center justify-between shadow-sm"
+      >
+        <div class="flex items-center gap-2">
+          <iconify-icon
+            icon="solar:droplet-minimalistic-bold"
+            class="text-primary size-5"
+          ></iconify-icon
+          ><span class="font-heading font-semibold text-base tracking-tight text-primary"
+            >SoilFlow</span
+          >
+        </div>
+        <div class="flex items-center gap-4 text-xs font-medium text-muted-foreground">
+          <div class="flex items-center gap-1.5" title="Pump Status">
+            <iconify-icon
+              icon="material-symbols:water-pump-rounded"
+              class="size-4 text-foreground"
+            ></iconify-icon
+            ><span>Idle</span>
+          </div>
+          <div class="flex items-center gap-1.5" title="Reservoir Level">
+            <iconify-icon icon="solar:waterdrops-bold" class="size-4 text-chart-3"></iconify-icon
+            ><span>72%</span>
+          </div>
+          <div class="flex items-center gap-1.5" title="Wi-Fi Signal">
+            <iconify-icon icon="solar:wi-fi-bold" class="size-4 text-primary"></iconify-icon>
+          </div>
+        </div>
+      </header>
+      <main class="flex-1 px-5 pt-6 flex flex-col gap-6">
+        <div
+          class="bg-gradient-to-br from-secondary to-card rounded-[1.25rem] p-5 border border-border shadow-md relative overflow-hidden"
+        >
+          <div class="absolute -right-8 -top-8 w-32 h-32 bg-primary/10 rounded-full blur-2xl"></div>
+          <div class="relative z-10 flex items-start justify-between">
+            <div>
+              <p class="text-sm font-medium text-secondary-foreground mb-1 flex items-center gap-2">
+                <iconify-icon icon="solar:clock-circle-linear" class="size-4"></iconify-icon>Next
+                Scheduled Cycle
+              </p>
+              <h2 class="font-heading text-3xl font-bold text-foreground tracking-tight">2h 45m</h2>
+              <p class="text-xs text-muted-foreground mt-1">Evening routine • 2 plants targeted</p>
+            </div>
+            <button
+              class="bg-primary/10 text-primary hover:bg-primary/20 transition-colors p-3 rounded-full flex items-center justify-center"
+            >
+              <iconify-icon icon="solar:play-circle-bold" class="size-6"></iconify-icon>
+            </button>
+          </div>
+        </div>
+        <div class="flex flex-col gap-4">
+          <div class="flex items-center justify-between">
+            <h3 class="font-heading text-lg font-semibold text-foreground tracking-tight">
+              Monitored Plants
+            </h3>
+            <span class="text-xs font-medium bg-muted text-muted-foreground px-2 py-1 rounded-full"
+              >3 Active</span
+            >
+          </div>
+          <div class="flex flex-col gap-4">
+            <div
+              class="bg-card rounded-[1.25rem] border border-border p-4 flex gap-4 items-center shadow-sm relative overflow-hidden"
+            >
+              <div
+                class="relative w-16 h-16 rounded-xl overflow-hidden shrink-0 border border-border/50"
+              >
+                <img
+                  src="https://ggrhecslgdflloszjkwl.supabase.co/storage/v1/object/public/user-assets/reoq0uosIc8/components/igHOUVxWvZG.png"
+                  alt="Monstera Deliciosa"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="flex-1 min-w-0">
+                <div class="flex items-start justify-between gap-2 mb-1">
+                  <h4 class="font-heading font-semibold text-base text-foreground truncate">
+                    Monstera
+                  </h4>
+                  <span
+                    class="shrink-0 flex items-center gap-1 bg-primary/10 text-primary text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider"
+                    ><iconify-icon icon="solar:check-circle-bold" class="size-3"></iconify-icon
+                    >OK</span
+                  >
+                </div>
+                <p class="text-xs text-muted-foreground truncate mb-3">Monstera Deliciosa • Ch 1</p>
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-2">
+                    <div class="w-10 h-10 relative flex items-center justify-center">
+                      <svg class="w-full h-full -rotate-90" viewBox="0 0 36 36">
+                        <path
+                          class="text-muted"
+                          stroke-width="3"
+                          stroke="currentColor"
+                          fill="none"
+                          d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                        />
+                        <path
+                          class="text-primary"
+                          stroke-dasharray="62, 100"
+                          stroke-width="3"
+                          stroke-linecap="round"
+                          stroke="currentColor"
+                          fill="none"
+                          d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                        /></svg
+                      ><span class="absolute text-[10px] font-bold text-foreground">62%</span>
+                    </div>
+                    <div class="flex flex-col">
+                      <span
+                        class="text-[10px] text-muted-foreground uppercase tracking-wider font-semibold"
+                        >Moisture</span
+                      ><span class="text-xs text-foreground font-medium">Optimal</span>
+                    </div>
+                  </div>
+                  <div class="text-right">
+                    <span
+                      class="block text-[10px] text-muted-foreground uppercase tracking-wider font-semibold"
+                      >Watered</span
+                    ><span class="text-xs text-foreground font-medium">3d ago</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="bg-card rounded-[1.25rem] border border-accent/30 p-4 flex gap-4 items-center shadow-sm relative overflow-hidden"
+            >
+              <div class="absolute inset-0 bg-accent/5 pointer-events-none"></div>
+              <div
+                class="relative w-16 h-16 rounded-xl overflow-hidden shrink-0 border border-border/50"
+              >
+                <img
+                  src="https://ggrhecslgdflloszjkwl.supabase.co/storage/v1/object/public/user-assets/reoq0uosIc8/components/4Csh5SK28xc.png"
+                  alt="Ficus Elastica"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="flex-1 min-w-0 z-10">
+                <div class="flex items-start justify-between gap-2 mb-1">
+                  <h4 class="font-heading font-semibold text-base text-foreground truncate">
+                    Rubber Tree
+                  </h4>
+                  <span
+                    class="shrink-0 flex items-center gap-1 bg-accent/10 text-accent text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider"
+                    ><iconify-icon icon="solar:danger-triangle-bold" class="size-3"></iconify-icon
+                    >Dry</span
+                  >
+                </div>
+                <p class="text-xs text-muted-foreground truncate mb-3">Ficus Elastica • Ch 2</p>
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-2">
+                    <div class="w-10 h-10 relative flex items-center justify-center">
+                      <svg class="w-full h-full -rotate-90" viewBox="0 0 36 36">
+                        <path
+                          class="text-muted"
+                          stroke-width="3"
+                          stroke="currentColor"
+                          fill="none"
+                          d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                        />
+                        <path
+                          class="text-accent"
+                          stroke-dasharray="18, 100"
+                          stroke-width="3"
+                          stroke-linecap="round"
+                          stroke="currentColor"
+                          fill="none"
+                          d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                        /></svg
+                      ><span class="absolute text-[10px] font-bold text-accent">18%</span>
+                    </div>
+                    <div class="flex flex-col">
+                      <span
+                        class="text-[10px] text-muted-foreground uppercase tracking-wider font-semibold"
+                        >Moisture</span
+                      ><span class="text-xs text-accent font-medium">Critical</span>
+                    </div>
+                  </div>
+                  <div class="text-right">
+                    <span
+                      class="block text-[10px] text-muted-foreground uppercase tracking-wider font-semibold"
+                      >Watered</span
+                    ><span class="text-xs text-foreground font-medium">8d ago</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="bg-card rounded-[1.25rem] border border-border p-4 flex gap-4 items-center shadow-sm relative overflow-hidden"
+            >
+              <div
+                class="relative w-16 h-16 rounded-xl overflow-hidden shrink-0 border border-border/50"
+              >
+                <img
+                  src="https://ggrhecslgdflloszjkwl.supabase.co/storage/v1/object/public/user-assets/reoq0uosIc8/components/yIZ7dXgYOFI.png"
+                  alt="Neon Pothos"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="flex-1 min-w-0">
+                <div class="flex items-start justify-between gap-2 mb-1">
+                  <h4 class="font-heading font-semibold text-base text-foreground truncate">
+                    Neon Pothos
+                  </h4>
+                  <span
+                    class="shrink-0 flex items-center gap-1 bg-chart-3/10 text-chart-3 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider"
+                    ><iconify-icon icon="solar:waterdrops-bold" class="size-3"></iconify-icon
+                    >Wet</span
+                  >
+                </div>
+                <p class="text-xs text-muted-foreground truncate mb-3">Epipremnum aureum • Ch 3</p>
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-2">
+                    <div class="w-10 h-10 relative flex items-center justify-center">
+                      <svg class="w-full h-full -rotate-90" viewBox="0 0 36 36">
+                        <path
+                          class="text-muted"
+                          stroke-width="3"
+                          stroke="currentColor"
+                          fill="none"
+                          d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                        />
+                        <path
+                          class="text-chart-3"
+                          stroke-dasharray="88, 100"
+                          stroke-width="3"
+                          stroke-linecap="round"
+                          stroke="currentColor"
+                          fill="none"
+                          d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                        /></svg
+                      ><span class="absolute text-[10px] font-bold text-foreground">88%</span>
+                    </div>
+                    <div class="flex flex-col">
+                      <span
+                        class="text-[10px] text-muted-foreground uppercase tracking-wider font-semibold"
+                        >Moisture</span
+                      ><span class="text-xs text-foreground font-medium">Saturated</span>
+                    </div>
+                  </div>
+                  <div class="text-right">
+                    <span
+                      class="block text-[10px] text-muted-foreground uppercase tracking-wider font-semibold"
+                      >Watered</span
+                    ><span class="text-xs text-foreground font-medium">Just now</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <nav
+        class="fixed bottom-0 left-0 right-0 bg-background/90 backdrop-blur-xl border-t border-border pb-safe pt-2 px-6 z-30"
+      >
+        <div class="flex items-center justify-between pb-2">
+          <a href="#" class="flex flex-col items-center gap-1 text-primary p-2"
+            ><iconify-icon icon="solar:home-2-bold" class="size-6"></iconify-icon
+            ><span class="text-[10px] font-semibold">Home</span></a
+          ><a
+            href="#"
+            class="flex flex-col items-center gap-1 text-muted-foreground hover:text-foreground transition-colors p-2"
+            ><iconify-icon icon="solar:leaf-linear" class="size-6"></iconify-icon
+            ><span class="text-[10px] font-medium">Plants</span></a
+          ><a
+            href="#"
+            class="flex flex-col items-center gap-1 text-muted-foreground hover:text-foreground transition-colors p-2"
+            ><iconify-icon icon="solar:history-linear" class="size-6"></iconify-icon
+            ><span class="text-[10px] font-medium">Automations</span></a
+          ><a
+            href="#"
+            class="flex flex-col items-center gap-1 text-muted-foreground hover:text-foreground transition-colors p-2"
+            ><iconify-icon icon="solar:settings-linear" class="size-6"></iconify-icon
+            ><span class="text-[10px] font-medium">Settings</span></a
+          >
+        </div>
+      </nav>
+    </div>
+  </body>
+</html>

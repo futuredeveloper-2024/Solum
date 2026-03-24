@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #0a110d;
+  --color-foreground: #f0fdf4;
+  --color-primary: #10b981;
+  --color-primary-foreground: #022c22;
+  --color-secondary: #1b2a20;
+  --color-secondary-foreground: #a7f3d0;
+  --color-muted: #16221a;
+  --color-muted-foreground: #9ca3af;
+  --color-accent: #f59e0b;
+  --color-accent-foreground: #fffbeb;
+  --color-destructive: #ef4444;
+  --color-card: #111a14;
+  --color-card-foreground: #f0fdf4;
+  --color-popover: #111a14;
+  --color-popover-foreground: #f0fdf4;
+  --color-border: #203326;
+  --color-input: #16221a;
+  --color-ring: #10b981;
+  --color-chart-1: #2dd4bf;
+  --color-chart-2: #f59e0b;
+  --color-chart-3: #3b82f6;
+  --color-chart-4: #86efac;
+  --color-chart-5: #8b5cf6;
+  --font-sans: "Inter", sans-serif;
+  --font-heading: "Plus Jakarta Sans", sans-serif;
+  --font-serif: "Playfair Display", serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #0a110d;
+  color: #f0fdf4;
+  font-family: "Inter", sans-serif;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+iconify-icon {
+  display: inline-block;
+  line-height: 1;
+}
+
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}

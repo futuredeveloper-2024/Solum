@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PlantDetail</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js"></script>
+    <style type="text/tailwindcss">
+
+      @theme inline {
+        --color-background: var(--background);
+        --color-foreground: var(--foreground);
+        --color-primary: var(--primary);
+        --color-primary-foreground: var(--primary-foreground);
+        --color-secondary: var(--secondary);
+        --color-secondary-foreground: var(--secondary-foreground);
+        --color-muted: var(--muted);
+        --color-muted-foreground: var(--muted-foreground);
+        --color-accent: var(--accent);
+        --color-accent-foreground: var(--accent-foreground);
+        --color-destructive: var(--destructive);
+        --color-card: var(--card);
+        --color-card-foreground: var(--card-foreground);
+        --color-popover: var(--popover);
+        --color-popover-foreground: var(--popover-foreground);
+        --color-border: var(--border);
+        --color-input: var(--input);
+        --color-ring: var(--ring);
+        --color-chart-1: var(--chart-1);
+        --color-chart-2: var(--chart-2);
+        --color-chart-3: var(--chart-3);
+        --color-chart-4: var(--chart-4);
+        --color-chart-5: var(--chart-5);
+
+        --font-font-sans: var(--font-sans);
+        --font-font-heading: var(--font-heading);
+        --font-font-serif: var(--font-serif);
+        --font-font-mono: var(--font-mono);
+
+        --radius-sm: calc(var(--radius) - 4px);
+        --radius-md: calc(var(--radius) - 2px);
+        --radius-lg: var(--radius);
+        --radius-xl: calc(var(--radius) + 4px);
+      }
+
+      :root {
+          --background: #0A110D;
+        --foreground: #F0FDF4;
+        --primary: #10B981;
+        --primary-foreground: #022C22;
+        --secondary: #1B2A20;
+        --secondary-foreground: #A7F3D0;
+        --muted: #16221A;
+        --muted-foreground: #9CA3AF;
+        --accent: #F59E0B;
+        --accent-foreground: #FFFBEB;
+        --destructive: #EF4444;
+        --card: #111A14;
+        --card-foreground: #F0FDF4;
+        --popover: #111A14;
+        --popover-foreground: #F0FDF4;
+        --border: #203326;
+        --input: #16221A;
+        --ring: #10B981;
+        --chart-1: #2DD4BF;
+        --chart-2: #F59E0B;
+        --chart-3: #3B82F6;
+        --chart-4: #86EFAC;
+        --chart-5: #8B5CF6;
+
+        --font-sans: "Inter";
+        --font-heading: "Plus Jakarta Sans";
+        --font-serif: "Playfair Display";
+        --font-mono: "JetBrains Mono";
+
+        --radius: 1.25rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex flex-col min-h-screen bg-background text-foreground font-sans pb-10">
+      <div class="relative h-72 w-full overflow-hidden">
+        <img
+          src="https://ggrhecslgdflloszjkwl.supabase.co/storage/v1/object/public/user-assets/reoq0uosIc8/components/igHOUVxWvZG.png-hero"
+          alt="Monstera Hero"
+          class="w-full h-full object-cover"
+        />
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"
+        ></div>
+        <div class="absolute top-6 left-5 right-5 flex items-center justify-between z-10">
+          <button
+            class="bg-black/30 backdrop-blur-md text-white p-2.5 rounded-full border border-white/10"
+          >
+            <iconify-icon icon="solar:alt-arrow-left-linear" class="size-6"></iconify-icon></button
+          ><button
+            class="bg-black/30 backdrop-blur-md text-white p-2.5 rounded-full border border-white/10"
+          >
+            <iconify-icon icon="solar:pen-new-square-linear" class="size-6"></iconify-icon>
+          </button>
+        </div>
+        <div class="absolute bottom-6 left-5 right-5">
+          <h1 class="font-heading text-3xl font-bold text-white tracking-tight">Monstera</h1>
+          <p class="text-white/70 italic text-sm">Monstera Deliciosa • Channel 1</p>
+        </div>
+      </div>
+      <main class="px-5 -mt-2 relative z-10 flex flex-col gap-8">
+        <div class="grid grid-cols-3 gap-3">
+          <div
+            class="bg-card border border-border rounded-2xl p-3 flex flex-col items-center justify-center text-center gap-1"
+          >
+            <iconify-icon icon="solar:droplet-bold" class="text-primary size-5"></iconify-icon
+            ><span class="text-xs text-muted-foreground font-medium uppercase tracking-wider"
+              >Moisture</span
+            ><span class="text-lg font-bold">62%</span>
+          </div>
+          <div
+            class="bg-card border border-border rounded-2xl p-3 flex flex-col items-center justify-center text-center gap-1"
+          >
+            <iconify-icon icon="solar:star-bold" class="text-chart-1 size-5"></iconify-icon
+            ><span class="text-xs text-muted-foreground font-medium uppercase tracking-wider"
+              >Health</span
+            ><span class="text-lg font-bold">Peak</span>
+          </div>
+          <div
+            class="bg-card border border-border rounded-2xl p-3 flex flex-col items-center justify-center text-center gap-1"
+          >
+            <iconify-icon icon="solar:calendar-bold" class="text-chart-3 size-5"></iconify-icon
+            ><span class="text-xs text-muted-foreground font-medium uppercase tracking-wider"
+              >Watered</span
+            ><span class="text-lg font-bold">3d</span>
+          </div>
+        </div>
+        <div class="flex flex-col gap-4">
+          <div class="flex items-center justify-between">
+            <h3 class="font-heading text-lg font-semibold tracking-tight text-foreground">
+              Moisture History
+            </h3>
+            <span class="text-xs text-muted-foreground">Last 7 Days</span>
+          </div>
+          <div
+            class="bg-card border border-border rounded-3xl p-6 h-48 relative flex items-end justify-between gap-1"
+          >
+            <div class="flex-1 flex flex-col justify-end gap-2 h-full">
+              <div class="w-full bg-primary/20 rounded-t-md relative group h-[80%]">
+                <div class="absolute inset-x-0 bottom-0 bg-primary/40 rounded-t-md h-[100%]"></div>
+              </div>
+              <span class="text-[10px] text-center text-muted-foreground">M</span>
+            </div>
+            <div class="flex-1 flex flex-col justify-end gap-2 h-full">
+              <div class="w-full bg-primary/20 rounded-t-md relative group h-[70%]">
+                <div class="absolute inset-x-0 bottom-0 bg-primary/40 rounded-t-md h-[100%]"></div>
+              </div>
+              <span class="text-[10px] text-center text-muted-foreground">T</span>
+            </div>
+            <div class="flex-1 flex flex-col justify-end gap-2 h-full">
+              <div class="w-full bg-primary/20 rounded-t-md relative group h-[65%]">
+                <div class="absolute inset-x-0 bottom-0 bg-primary/40 rounded-t-md h-[100%]"></div>
+              </div>
+              <span class="text-[10px] text-center text-muted-foreground">W</span>
+            </div>
+            <div class="flex-1 flex flex-col justify-end gap-2 h-full">
+              <div class="w-full bg-primary/20 rounded-t-md relative group h-[50%]">
+                <div class="absolute inset-x-0 bottom-0 bg-primary/40 rounded-t-md h-[100%]"></div>
+              </div>
+              <span class="text-[10px] text-center text-muted-foreground">T</span>
+            </div>
+            <div class="flex-1 flex flex-col justify-end gap-2 h-full">
+              <div class="w-full bg-primary/20 rounded-t-md relative group h-[40%]">
+                <div class="absolute inset-x-0 bottom-0 bg-primary/40 rounded-t-md h-[100%]"></div>
+              </div>
+              <span class="text-[10px] text-center text-muted-foreground">F</span>
+            </div>
+            <div class="flex-1 flex flex-col justify-end gap-2 h-full">
+              <div class="w-full bg-primary/20 rounded-t-md relative group h-[85%]">
+                <div class="absolute inset-x-0 bottom-0 bg-primary/60 rounded-t-md h-[100%]"></div>
+              </div>
+              <span class="text-[10px] text-center text-muted-foreground">S</span>
+            </div>
+            <div class="flex-1 flex flex-col justify-end gap-2 h-full">
+              <div class="w-full bg-primary/20 rounded-t-md relative group h-[62%]">
+                <div class="absolute inset-x-0 bottom-0 bg-primary rounded-t-md h-[100%]"></div>
+              </div>
+              <span class="text-[10px] text-center text-muted-foreground font-bold text-primary"
+                >S</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="bg-secondary/40 border border-border rounded-3xl p-5 flex flex-col gap-4">
+          <div class="flex items-center justify-between">
+            <div class="flex flex-col">
+              <span class="text-sm font-semibold text-foreground">Auto-Watering Threshold</span
+              ><span class="text-xs text-muted-foreground"
+                >Pump activates when moisture &lt; 35%</span
+              >
+            </div>
+            <span class="text-xl font-bold text-primary">35%</span>
+          </div>
+          <div class="relative w-full h-1.5 bg-muted rounded-full">
+            <div class="absolute h-full w-[35%] bg-primary rounded-full"></div>
+            <div
+              class="absolute w-5 h-5 bg-white border-2 border-primary rounded-full -top-[7px] left-[35%] -translate-x-1/2 shadow-md"
+            ></div>
+          </div>
+        </div>
+        <button
+          class="w-full bg-primary text-primary-foreground font-heading font-bold text-lg py-5 rounded-[1.25rem] flex items-center justify-center gap-3 shadow-lg shadow-primary/20 active:scale-95 transition-all"
+        >
+          <iconify-icon icon="material-symbols:water-pump-rounded" class="size-6"></iconify-icon
+          >Start Watering Now
+        </button>
+        <div class="flex flex-col gap-4">
+          <h3 class="font-heading text-lg font-semibold tracking-tight text-foreground">
+            Recent Activity
+          </h3>
+          <div class="flex flex-col gap-3">
+            <div
+              class="flex items-center justify-between p-4 bg-card border border-border rounded-2xl"
+            >
+              <div class="flex items-center gap-3">
+                <div
+                  class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary"
+                >
+                  <iconify-icon icon="solar:droplet-bold" class="size-5"></iconify-icon>
+                </div>
+                <div>
+                  <p class="text-sm font-semibold text-foreground">Auto-Watering Cycle</p>
+                  <p class="text-xs text-muted-foreground">Oct 24, 08:30 PM</p>
+                </div>
+              </div>
+              <span class="text-sm font-medium text-primary">45s duration</span>
+            </div>
+            <div
+              class="flex items-center justify-between p-4 bg-card border border-border rounded-2xl"
+            >
+              <div class="flex items-center gap-3">
+                <div
+                  class="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-secondary-foreground"
+                >
+                  <iconify-icon icon="solar:user-bold" class="size-5"></iconify-icon>
+                </div>
+                <div>
+                  <p class="text-sm font-semibold text-foreground">Manual Override</p>
+                  <p class="text-xs text-muted-foreground">Oct 21, 09:15 AM</p>
+                </div>
+              </div>
+              <span class="text-sm font-medium text-primary">15s duration</span>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
