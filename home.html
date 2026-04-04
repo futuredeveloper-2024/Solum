@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -139,7 +139,7 @@
                 Scheduled Cycle
               </p>
               <h2 class="font-heading text-3xl font-bold text-foreground tracking-tight">2h 45m</h2>
-              <p class="text-xs text-muted-foreground mt-1">Evening routine • 2 plants targeted</p>
+              <p class="text-xs text-muted-foreground mt-1">Evening routine â€¢ 2 plants targeted</p>
             </div>
             <button
               class="bg-primary/10 text-primary hover:bg-primary/20 transition-colors p-3 rounded-full flex items-center justify-center"
@@ -149,201 +149,34 @@
           </div>
         </div>
         <div class="flex flex-col gap-4">
-          <div class="flex items-center justify-between">
-            <h3 class="font-heading text-lg font-semibold text-foreground tracking-tight">
-              Monitored Plants
-            </h3>
-            <span class="text-xs font-medium bg-muted text-muted-foreground px-2 py-1 rounded-full"
-              >3 Active</span
-            >
+          <div class="flex items-center justify-between gap-3">
+            <div>
+              <h3 class="font-heading text-lg font-semibold text-foreground tracking-tight">
+                Monitored Plants
+              </h3>
+              <p class="text-xs text-muted-foreground">Store up to 8 plants on this device</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <span
+                id="plantCount"
+                class="text-xs font-medium bg-muted text-muted-foreground px-2 py-1 rounded-full"
+                >0 Active</span
+              >
+              <button
+                id="openAddPlantButton"
+                type="button"
+                class="inline-flex items-center gap-2 rounded-full bg-primary px-3 py-2 text-xs font-semibold text-primary-foreground shadow-lg shadow-primary/20 transition-all hover:scale-105 active:scale-95"
+              >
+                <iconify-icon icon="hugeicons:add-01" class="size-4"></iconify-icon>
+                <span>Add Plant</span>
+              </button>
+            </div>
           </div>
-          <div class="flex flex-col gap-4">
+          <div id="plantsList" class="grid gap-4 sm:grid-cols-2">
             <div
-              class="bg-card rounded-[1.25rem] border border-border p-4 flex gap-4 items-center shadow-sm relative overflow-hidden"
+              class="bg-card/70 rounded-[1.25rem] border border-dashed border-border p-5 text-sm text-muted-foreground"
             >
-              <div
-                class="relative w-16 h-16 rounded-xl overflow-hidden shrink-0 border border-border/50"
-              >
-                <img
-                  src="https://ggrhecslgdflloszjkwl.supabase.co/storage/v1/object/public/user-assets/reoq0uosIc8/components/igHOUVxWvZG.png"
-                  alt="Monstera Deliciosa"
-                  class="w-full h-full object-cover"
-                />
-              </div>
-              <div class="flex-1 min-w-0">
-                <div class="flex items-start justify-between gap-2 mb-1">
-                  <h4 class="font-heading font-semibold text-base text-foreground truncate">
-                    Monstera
-                  </h4>
-                  <span
-                    class="shrink-0 flex items-center gap-1 bg-primary/10 text-primary text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider"
-                    ><iconify-icon icon="solar:check-circle-bold" class="size-3"></iconify-icon
-                    >OK</span
-                  >
-                </div>
-                <p class="text-xs text-muted-foreground truncate mb-3">Monstera Deliciosa • Ch 1</p>
-                <div class="flex items-center justify-between">
-                  <div class="flex items-center gap-2">
-                    <div class="w-10 h-10 relative flex items-center justify-center">
-                      <svg class="w-full h-full -rotate-90" viewBox="0 0 36 36">
-                        <path
-                          class="text-muted"
-                          stroke-width="3"
-                          stroke="currentColor"
-                          fill="none"
-                          d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
-                        />
-                        <path
-                          class="text-primary"
-                          stroke-dasharray="62, 100"
-                          stroke-width="3"
-                          stroke-linecap="round"
-                          stroke="currentColor"
-                          fill="none"
-                          d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
-                        /></svg
-                      ><span class="absolute text-[10px] font-bold text-foreground">62%</span>
-                    </div>
-                    <div class="flex flex-col">
-                      <span
-                        class="text-[10px] text-muted-foreground uppercase tracking-wider font-semibold"
-                        >Moisture</span
-                      ><span class="text-xs text-foreground font-medium">Optimal</span>
-                    </div>
-                  </div>
-                  <div class="text-right">
-                    <span
-                      class="block text-[10px] text-muted-foreground uppercase tracking-wider font-semibold"
-                      >Watered</span
-                    ><span class="text-xs text-foreground font-medium">3d ago</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              class="bg-card rounded-[1.25rem] border border-accent/30 p-4 flex gap-4 items-center shadow-sm relative overflow-hidden"
-            >
-              <div class="absolute inset-0 bg-accent/5 pointer-events-none"></div>
-              <div
-                class="relative w-16 h-16 rounded-xl overflow-hidden shrink-0 border border-border/50"
-              >
-                <img
-                  src="https://ggrhecslgdflloszjkwl.supabase.co/storage/v1/object/public/user-assets/reoq0uosIc8/components/4Csh5SK28xc.png"
-                  alt="Ficus Elastica"
-                  class="w-full h-full object-cover"
-                />
-              </div>
-              <div class="flex-1 min-w-0 z-10">
-                <div class="flex items-start justify-between gap-2 mb-1">
-                  <h4 class="font-heading font-semibold text-base text-foreground truncate">
-                    Rubber Tree
-                  </h4>
-                  <span
-                    class="shrink-0 flex items-center gap-1 bg-accent/10 text-accent text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider"
-                    ><iconify-icon icon="solar:danger-triangle-bold" class="size-3"></iconify-icon
-                    >Dry</span
-                  >
-                </div>
-                <p class="text-xs text-muted-foreground truncate mb-3">Ficus Elastica • Ch 2</p>
-                <div class="flex items-center justify-between">
-                  <div class="flex items-center gap-2">
-                    <div class="w-10 h-10 relative flex items-center justify-center">
-                      <svg class="w-full h-full -rotate-90" viewBox="0 0 36 36">
-                        <path
-                          class="text-muted"
-                          stroke-width="3"
-                          stroke="currentColor"
-                          fill="none"
-                          d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
-                        />
-                        <path
-                          class="text-accent"
-                          stroke-dasharray="18, 100"
-                          stroke-width="3"
-                          stroke-linecap="round"
-                          stroke="currentColor"
-                          fill="none"
-                          d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
-                        /></svg
-                      ><span class="absolute text-[10px] font-bold text-accent">18%</span>
-                    </div>
-                    <div class="flex flex-col">
-                      <span
-                        class="text-[10px] text-muted-foreground uppercase tracking-wider font-semibold"
-                        >Moisture</span
-                      ><span class="text-xs text-accent font-medium">Critical</span>
-                    </div>
-                  </div>
-                  <div class="text-right">
-                    <span
-                      class="block text-[10px] text-muted-foreground uppercase tracking-wider font-semibold"
-                      >Watered</span
-                    ><span class="text-xs text-foreground font-medium">8d ago</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              class="bg-card rounded-[1.25rem] border border-border p-4 flex gap-4 items-center shadow-sm relative overflow-hidden"
-            >
-              <div
-                class="relative w-16 h-16 rounded-xl overflow-hidden shrink-0 border border-border/50"
-              >
-                <img
-                  src="https://ggrhecslgdflloszjkwl.supabase.co/storage/v1/object/public/user-assets/reoq0uosIc8/components/yIZ7dXgYOFI.png"
-                  alt="Neon Pothos"
-                  class="w-full h-full object-cover"
-                />
-              </div>
-              <div class="flex-1 min-w-0">
-                <div class="flex items-start justify-between gap-2 mb-1">
-                  <h4 class="font-heading font-semibold text-base text-foreground truncate">
-                    Neon Pothos
-                  </h4>
-                  <span
-                    class="shrink-0 flex items-center gap-1 bg-chart-3/10 text-chart-3 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider"
-                    ><iconify-icon icon="solar:waterdrops-bold" class="size-3"></iconify-icon
-                    >Wet</span
-                  >
-                </div>
-                <p class="text-xs text-muted-foreground truncate mb-3">Epipremnum aureum • Ch 3</p>
-                <div class="flex items-center justify-between">
-                  <div class="flex items-center gap-2">
-                    <div class="w-10 h-10 relative flex items-center justify-center">
-                      <svg class="w-full h-full -rotate-90" viewBox="0 0 36 36">
-                        <path
-                          class="text-muted"
-                          stroke-width="3"
-                          stroke="currentColor"
-                          fill="none"
-                          d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
-                        />
-                        <path
-                          class="text-chart-3"
-                          stroke-dasharray="88, 100"
-                          stroke-width="3"
-                          stroke-linecap="round"
-                          stroke="currentColor"
-                          fill="none"
-                          d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
-                        /></svg
-                      ><span class="absolute text-[10px] font-bold text-foreground">88%</span>
-                    </div>
-                    <div class="flex flex-col">
-                      <span
-                        class="text-[10px] text-muted-foreground uppercase tracking-wider font-semibold"
-                        >Moisture</span
-                      ><span class="text-xs text-foreground font-medium">Saturated</span>
-                    </div>
-                  </div>
-                  <div class="text-right">
-                    <span
-                      class="block text-[10px] text-muted-foreground uppercase tracking-wider font-semibold"
-                      >Watered</span
-                    ><span class="text-xs text-foreground font-medium">Just now</span>
-                  </div>
-                </div>
-              </div>
+              Loading plants...
             </div>
           </div>
         </div>
@@ -373,6 +206,538 @@
           >
         </div>
       </nav>
+      <div id="plantModal" hidden class="fixed inset-0 z-50">
+        <div
+          class="absolute inset-0 bg-black/70 backdrop-blur-sm"
+          data-close-plant-modal
+        ></div>
+        <div class="relative z-10 flex min-h-full items-end justify-center p-4 sm:items-center">
+          <div
+            class="w-full max-w-lg rounded-[1.5rem] border border-border bg-card shadow-2xl shadow-black/50"
+          >
+            <div class="flex items-start justify-between gap-4 border-b border-border px-5 py-4">
+              <div>
+                <p
+                  id="plantModalEyebrow"
+                  class="text-[10px] uppercase tracking-[0.25em] text-muted-foreground"
+                >
+                  Plant
+                </p>
+                <h3 id="plantModalTitle" class="font-heading text-xl font-semibold text-foreground">
+                  Plant Details
+                </h3>
+              </div>
+              <button
+                id="closePlantModalButton"
+                type="button"
+                class="rounded-full bg-muted p-2 text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
+                aria-label="Close plant modal"
+              >
+                <iconify-icon icon="solar:alt-arrow-left-linear" class="size-5"></iconify-icon>
+              </button>
+            </div>
+
+            <div id="plantDetailView" class="hidden p-5">
+              <div class="flex flex-col gap-5">
+                <div class="overflow-hidden rounded-[1.25rem] border border-border bg-muted/40">
+                  <img
+                    id="detailPlantImage"
+                    src=""
+                    alt=""
+                    class="h-64 w-full object-cover"
+                  />
+                </div>
+                <div class="space-y-2">
+                  <h4 id="detailPlantName" class="font-heading text-2xl font-semibold text-foreground">
+                    Plant Name
+                  </h4>
+                  <p id="detailPlantDesc" class="text-sm leading-6 text-muted-foreground">
+                    Plant description
+                  </p>
+                </div>
+                <div class="grid grid-cols-2 gap-3">
+                  <button
+                    id="editPlantButton"
+                    type="button"
+                    class="rounded-[1.1rem] bg-primary px-4 py-3 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/20 transition-all hover:scale-[1.01] active:scale-95"
+                  >
+                    Edit Plant
+                  </button>
+                  <button
+                    id="deletePlantButton"
+                    type="button"
+                    class="rounded-[1.1rem] bg-accent/10 px-4 py-3 text-sm font-semibold text-accent transition-colors hover:bg-accent/20"
+                  >
+                    Delete Plant
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <form id="plantForm" class="hidden p-5">
+              <input id="editingPlantId" type="hidden" />
+              <div class="flex flex-col gap-4">
+                <label class="flex flex-col gap-2 text-sm">
+                  <span class="font-medium text-foreground">Image</span>
+                  <input
+                    id="plantImageInput"
+                    type="file"
+                    accept="image/*"
+                    capture="environment"
+                    required
+                    class="rounded-[1rem] border border-border bg-background px-4 py-3 text-sm text-foreground file:mr-3 file:rounded-full file:border-0 file:bg-primary file:px-3 file:py-1.5 file:text-xs file:font-semibold file:text-primary-foreground"
+                  />
+                </label>
+
+                <div
+                  id="plantImagePreviewWrapper"
+                  class="hidden overflow-hidden rounded-[1.25rem] border border-border bg-muted/40"
+                >
+                  <img
+                    id="plantImagePreview"
+                    src=""
+                    alt="Selected plant preview"
+                    class="h-48 w-full object-cover"
+                  />
+                </div>
+
+                <label class="flex flex-col gap-2 text-sm">
+                  <span class="font-medium text-foreground">Plant Name</span>
+                  <input
+                    id="plantNameInput"
+                    type="text"
+                    placeholder="Enter plant name"
+                    required
+                    class="rounded-[1rem] border border-border bg-background px-4 py-3 text-sm text-foreground outline-none transition focus:border-primary"
+                  />
+                </label>
+
+                <label class="flex flex-col gap-2 text-sm">
+                  <span class="font-medium text-foreground">Description</span>
+                  <textarea
+                    id="plantDescInput"
+                    rows="4"
+                    placeholder="Describe this plant"
+                    required
+                    class="rounded-[1rem] border border-border bg-background px-4 py-3 text-sm text-foreground outline-none transition focus:border-primary"
+                  ></textarea>
+                </label>
+
+                <p id="plantFormError" class="hidden text-sm font-medium text-accent">
+                  Please complete all required fields.
+                </p>
+
+                <div class="flex items-center justify-end gap-3">
+                  <button
+                    id="cancelPlantFormButton"
+                    type="button"
+                    class="rounded-full bg-muted px-4 py-2 text-sm font-semibold text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
+                  >
+                    Cancel
+                  </button>
+                  <button
+                    id="savePlantButton"
+                    type="submit"
+                    class="rounded-full bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/20 transition-all hover:scale-105 active:scale-95"
+                  >
+                    Save Plant
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
+    <script>
+      const STORAGE_KEY = "plants";
+      const MAX_PLANTS = 8;
+
+      const plantsListEl = document.getElementById("plantsList");
+      const plantCountEl = document.getElementById("plantCount");
+      const openAddPlantButton = document.getElementById("openAddPlantButton");
+      const plantModal = document.getElementById("plantModal");
+      const plantModalEyebrow = document.getElementById("plantModalEyebrow");
+      const plantModalTitle = document.getElementById("plantModalTitle");
+      const closePlantModalButton = document.getElementById("closePlantModalButton");
+      const plantDetailView = document.getElementById("plantDetailView");
+      const plantForm = document.getElementById("plantForm");
+      const editingPlantIdInput = document.getElementById("editingPlantId");
+      const plantImageInput = document.getElementById("plantImageInput");
+      const plantImagePreviewWrapper = document.getElementById("plantImagePreviewWrapper");
+      const plantImagePreview = document.getElementById("plantImagePreview");
+      const plantNameInput = document.getElementById("plantNameInput");
+      const plantDescInput = document.getElementById("plantDescInput");
+      const plantFormError = document.getElementById("plantFormError");
+      const detailPlantImage = document.getElementById("detailPlantImage");
+      const detailPlantName = document.getElementById("detailPlantName");
+      const detailPlantDesc = document.getElementById("detailPlantDesc");
+      const editPlantButton = document.getElementById("editPlantButton");
+      const deletePlantButton = document.getElementById("deletePlantButton");
+      const cancelPlantFormButton = document.getElementById("cancelPlantFormButton");
+      const savePlantButton = document.getElementById("savePlantButton");
+
+      let activePlantId = null;
+
+      document.addEventListener("DOMContentLoaded", initPlantSection);
+
+      function initPlantSection() {
+        bindPlantEvents();
+        displayPlants();
+      }
+
+      function bindPlantEvents() {
+        openAddPlantButton.addEventListener("click", openAddPlantForm);
+        closePlantModalButton.addEventListener("click", closePlantModal);
+        cancelPlantFormButton.addEventListener("click", closePlantModal);
+        plantForm.addEventListener("submit", handlePlantFormSubmit);
+        plantImageInput.addEventListener("change", handleImagePreview);
+        editPlantButton.addEventListener("click", () => openEditPlantForm(activePlantId));
+        deletePlantButton.addEventListener("click", () => deletePlant(activePlantId));
+
+        plantModal
+          .querySelector("[data-close-plant-modal]")
+          .addEventListener("click", closePlantModal);
+
+        document.addEventListener("keydown", (event) => {
+          if (event.key === "Escape" && !plantModal.hidden) {
+            closePlantModal();
+          }
+        });
+      }
+
+      function getPlants() {
+        try {
+          return JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+        } catch (error) {
+          console.warn("Unable to read plants from localStorage.", error);
+          return [];
+        }
+      }
+
+      function savePlants(plants) {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(plants));
+      }
+
+      function displayPlants() {
+        const plants = getPlants();
+        plantCountEl.textContent = `${plants.length} Active`;
+
+        if (!plants.length) {
+          plantsListEl.innerHTML = `
+            <div class="sm:col-span-2 bg-card/70 rounded-[1.25rem] border border-dashed border-border p-5 text-center text-sm text-muted-foreground">
+              <div class="flex flex-col items-center gap-3">
+                <iconify-icon icon="solar:leaf-linear" class="size-8 text-primary/50"></iconify-icon>
+                <p>No plants saved yet. Add your first plant to start tracking it.</p>
+                <button
+                  type="button"
+                  id="emptyStateAddPlantButton"
+                  class="inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-xs font-semibold text-primary-foreground shadow-lg shadow-primary/20 transition-all hover:scale-105 active:scale-95"
+                >
+                  <iconify-icon icon="hugeicons:add-01" class="size-4"></iconify-icon>
+                  <span>Add Plant</span>
+                </button>
+              </div>
+            </div>
+          `;
+
+          document
+            .getElementById("emptyStateAddPlantButton")
+            .addEventListener("click", openAddPlantForm);
+          return;
+        }
+
+        plantsListEl.innerHTML = plants
+          .map((plant, index) => {
+            const accents = [
+              {
+                cardClass: "border-border",
+                badgeClass: "bg-primary/10 text-primary",
+                overlay: "",
+              },
+              {
+                cardClass: "border-accent/30",
+                badgeClass: "bg-accent/10 text-accent",
+                overlay: '<div class="absolute inset-0 bg-accent/5 pointer-events-none"></div>',
+              },
+              {
+                cardClass: "border-border",
+                badgeClass: "bg-chart-3/10 text-chart-3",
+                overlay: "",
+              },
+            ];
+
+            const accent = accents[index % accents.length];
+
+            return `
+              <button
+                type="button"
+                data-plant-id="${plant.id}"
+                class="w-full bg-card rounded-[1.25rem] border ${accent.cardClass} p-4 flex gap-4 items-center shadow-sm relative overflow-hidden text-left transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary/5 active:scale-[0.99]"
+              >
+                ${accent.overlay}
+                <div class="relative w-16 h-16 rounded-xl overflow-hidden shrink-0 border border-border/50">
+                  <img src="${plant.image}" alt="${escapeHtml(
+                    plant.name,
+                  )}" class="w-full h-full object-cover" />
+                </div>
+                <div class="flex-1 min-w-0 relative z-10">
+                  <div class="flex items-start justify-between gap-2 mb-1">
+                    <h4 class="font-heading font-semibold text-base text-foreground truncate">${escapeHtml(
+                      plant.name,
+                    )}</h4>
+                    <span class="shrink-0 flex items-center gap-1 ${accent.badgeClass} text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">
+                      <iconify-icon icon="solar:leaf-bold" class="size-3"></iconify-icon>
+                      Plant
+                    </span>
+                  </div>
+                  <p class="text-xs text-muted-foreground leading-5">${escapeHtml(
+                    truncateText(plant.desc, 110),
+                  )}</p>
+                </div>
+              </button>
+            `;
+          })
+          .join("");
+
+        plantsListEl.querySelectorAll("[data-plant-id]").forEach((button) => {
+          button.addEventListener("click", () => openPlantDetails(button.dataset.plantId));
+        });
+      }
+
+      function openAddPlantForm() {
+        if (getPlants().length >= MAX_PLANTS) {
+          alert("Maximum of 8 plants only");
+          return;
+        }
+
+        activePlantId = null;
+        resetPlantForm();
+        plantImageInput.required = true;
+        plantModalEyebrow.textContent = "Create";
+        plantModalTitle.textContent = "Add Plant";
+        savePlantButton.textContent = "Save Plant";
+        plantDetailView.classList.add("hidden");
+        plantForm.classList.remove("hidden");
+        showPlantModal();
+      }
+
+      function openPlantDetails(id) {
+        const plant = getPlants().find((item) => item.id === id);
+        if (!plant) {
+          return;
+        }
+
+        activePlantId = id;
+        detailPlantImage.src = plant.image;
+        detailPlantImage.alt = plant.name;
+        detailPlantName.textContent = plant.name;
+        detailPlantDesc.textContent = plant.desc;
+        plantModalEyebrow.textContent = "Details";
+        plantModalTitle.textContent = plant.name;
+        plantForm.classList.add("hidden");
+        plantDetailView.classList.remove("hidden");
+        showPlantModal();
+      }
+
+      function openEditPlantForm(id) {
+        const plant = getPlants().find((item) => item.id === id);
+        if (!plant) {
+          return;
+        }
+
+        activePlantId = id;
+        editingPlantIdInput.value = id;
+        plantNameInput.value = plant.name;
+        plantDescInput.value = plant.desc;
+        plantImageInput.required = false;
+        setImagePreview(plant.image);
+        clearFormError();
+        plantModalEyebrow.textContent = "Update";
+        plantModalTitle.textContent = "Edit Plant";
+        savePlantButton.textContent = "Update Plant";
+        plantDetailView.classList.add("hidden");
+        plantForm.classList.remove("hidden");
+        showPlantModal();
+      }
+
+      async function handlePlantFormSubmit(event) {
+        event.preventDefault();
+        const editingId = editingPlantIdInput.value;
+
+        if (editingId) {
+          await updatePlant(editingId);
+          return;
+        }
+
+        await addPlant();
+      }
+
+      async function addPlant() {
+        const plants = getPlants();
+        if (plants.length >= MAX_PLANTS) {
+          alert("Maximum of 8 plants only");
+          return;
+        }
+
+        const payload = await getPlantPayload();
+        if (!payload) {
+          return;
+        }
+
+        const newPlant = {
+          id: String(Date.now()),
+          image: payload.image,
+          name: payload.name,
+          desc: payload.desc,
+        };
+
+        plants.push(newPlant);
+        savePlants(plants);
+        displayPlants();
+        openPlantDetails(newPlant.id);
+      }
+
+      async function updatePlant(id) {
+        const plants = getPlants();
+        const plantIndex = plants.findIndex((plant) => plant.id === id);
+
+        if (plantIndex === -1) {
+          return;
+        }
+
+        const payload = await getPlantPayload(plants[plantIndex].image);
+        if (!payload) {
+          return;
+        }
+
+        plants[plantIndex] = {
+          ...plants[plantIndex],
+          image: payload.image,
+          name: payload.name,
+          desc: payload.desc,
+        };
+
+        savePlants(plants);
+        displayPlants();
+        openPlantDetails(id);
+      }
+
+      function deletePlant(id) {
+        if (!id) {
+          return;
+        }
+
+        if (!confirm("Are you sure you want to delete this plant?")) {
+          return;
+        }
+
+        const nextPlants = getPlants().filter((plant) => plant.id !== id);
+        savePlants(nextPlants);
+        closePlantModal();
+        displayPlants();
+      }
+
+      async function getPlantPayload(existingImage = "") {
+        clearFormError();
+
+        const imageFile = plantImageInput.files[0];
+        const name = plantNameInput.value.trim();
+        const desc = plantDescInput.value.trim();
+        let image = existingImage;
+
+        if (imageFile) {
+          image = await fileToBase64(imageFile);
+        }
+
+        if (!image || !name || !desc) {
+          showFormError("Please complete all required fields.");
+          return null;
+        }
+
+        return { image, name, desc };
+      }
+
+      function showPlantModal() {
+        plantModal.hidden = false;
+        document.body.style.overflow = "hidden";
+      }
+
+      function closePlantModal() {
+        plantModal.hidden = true;
+        document.body.style.overflow = "";
+        resetPlantForm();
+        plantDetailView.classList.add("hidden");
+      }
+
+      function resetPlantForm() {
+        plantForm.reset();
+        editingPlantIdInput.value = "";
+        plantImageInput.required = true;
+        savePlantButton.textContent = "Save Plant";
+        setImagePreview("");
+        clearFormError();
+      }
+
+      function showFormError(message) {
+        plantFormError.textContent = message;
+        plantFormError.classList.remove("hidden");
+      }
+
+      function clearFormError() {
+        plantFormError.textContent = "";
+        plantFormError.classList.add("hidden");
+      }
+
+      function handleImagePreview(event) {
+        const file = event.target.files[0];
+        if (!file) {
+          return;
+        }
+
+        const reader = new FileReader();
+        reader.onload = () => setImagePreview(reader.result);
+        reader.readAsDataURL(file);
+      }
+
+      function setImagePreview(src) {
+        if (!src) {
+          plantImagePreviewWrapper.classList.add("hidden");
+          plantImagePreview.src = "";
+          return;
+        }
+
+        plantImagePreviewWrapper.classList.remove("hidden");
+        plantImagePreview.src = src;
+      }
+
+      function truncateText(text, maxLength) {
+        if (text.length <= maxLength) {
+          return text;
+        }
+
+        return `${text.slice(0, maxLength - 1)}...`;
+      }
+
+      function escapeHtml(text) {
+        return text
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/"/g, "&quot;")
+          .replace(/'/g, "&#39;");
+      }
+
+      function fileToBase64(file) {
+        return new Promise((resolve, reject) => {
+          const reader = new FileReader();
+          reader.onload = () => resolve(reader.result);
+          reader.onerror = reject;
+          reader.readAsDataURL(file);
+        });
+      }
+
+    </script>
   </body>
 </html>
+

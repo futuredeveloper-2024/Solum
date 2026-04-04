@@ -30,6 +30,33 @@
   --font-mono: "JetBrains Mono", monospace;
 }
 
+:root[data-theme="light"],
+body[data-theme="light"] {
+  --color-background: #f4faf5;
+  --color-foreground: #13241b;
+  --color-primary: #0f9f6e;
+  --color-primary-foreground: #f0fdf4;
+  --color-secondary: #deefe3;
+  --color-secondary-foreground: #0f5132;
+  --color-muted: #e8f3eb;
+  --color-muted-foreground: #5f6f66;
+  --color-accent: #d97706;
+  --color-accent-foreground: #fff7ed;
+  --color-destructive: #dc2626;
+  --color-card: #ffffff;
+  --color-card-foreground: #13241b;
+  --color-popover: #ffffff;
+  --color-popover-foreground: #13241b;
+  --color-border: #d2e4d7;
+  --color-input: #eef7f0;
+  --color-ring: #0f9f6e;
+  --color-chart-1: #14b8a6;
+  --color-chart-2: #d97706;
+  --color-chart-3: #2563eb;
+  --color-chart-4: #65a30d;
+  --color-chart-5: #7c3aed;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -38,13 +65,16 @@ html,
 body,
 #root {
   min-height: 100%;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 body {
   margin: 0;
-  background: #0a110d;
-  color: #f0fdf4;
+  background: var(--color-background);
+  color: var(--color-foreground);
   font-family: "Inter", sans-serif;
+  transition: background-color 180ms ease, color 180ms ease;
 }
 
 button,
@@ -52,6 +82,11 @@ input,
 textarea,
 select {
   font: inherit;
+  transition:
+    background-color 180ms ease,
+    border-color 180ms ease,
+    color 180ms ease,
+    box-shadow 180ms ease;
 }
 
 button {
@@ -68,6 +103,12 @@ img {
   max-width: 100%;
 }
 
+input,
+textarea,
+select {
+  min-width: 0;
+}
+
 iconify-icon {
   display: inline-block;
   line-height: 1;
@@ -75,4 +116,116 @@ iconify-icon {
 
 .pb-safe {
   padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+.mobile-card {
+  width: 100%;
+  min-width: 0;
+}
+
+.page-transition {
+  animation: page-fade 220ms ease;
+}
+
+.modal-backdrop {
+  animation: overlay-fade 180ms ease;
+}
+
+.modal-panel {
+  animation: modal-pop 220ms cubic-bezier(0.2, 0.9, 0.2, 1);
+}
+
+.confirm-panel,
+.panel-transition {
+  animation: panel-pop 220ms cubic-bezier(0.2, 0.9, 0.2, 1);
+}
+
+.modal-scroll {
+  overscroll-behavior: contain;
+}
+
+body,
+.modal-scroll,
+.soilflow-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color:
+    color-mix(in srgb, var(--color-muted-foreground) 32%, transparent)
+    transparent;
+}
+
+body::-webkit-scrollbar,
+.modal-scroll::-webkit-scrollbar,
+.soilflow-scrollbar::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+body::-webkit-scrollbar-track,
+.modal-scroll::-webkit-scrollbar-track,
+.soilflow-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+body::-webkit-scrollbar-thumb,
+.modal-scroll::-webkit-scrollbar-thumb,
+.soilflow-scrollbar::-webkit-scrollbar-thumb {
+  border: 2px solid transparent;
+  border-radius: 999px;
+  background:
+    color-mix(in srgb, var(--color-muted-foreground) 30%, transparent)
+    padding-box;
+}
+
+body::-webkit-scrollbar-thumb:hover,
+.modal-scroll::-webkit-scrollbar-thumb:hover,
+.soilflow-scrollbar::-webkit-scrollbar-thumb:hover {
+  background:
+    color-mix(in srgb, var(--color-muted-foreground) 46%, transparent)
+    padding-box;
+}
+
+@keyframes page-fade {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes overlay-fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modal-pop {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes panel-pop {
+  from {
+    opacity: 0;
+    transform: translateY(14px) scale(0.985);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
